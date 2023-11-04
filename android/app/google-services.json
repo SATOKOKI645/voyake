@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "404169488931",
+    "project_id": "voyake-42b11",
+    "storage_bucket": "voyake-42b11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404169488931:android:4304637fcde87b0a9e8f96",
+        "android_client_info": {
+          "package_name": "com.example.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF53s4d6-cAfZZZI9_c_A3OYHs5DqIFZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
