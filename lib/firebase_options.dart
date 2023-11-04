@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -25,7 +28,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -43,16 +49,6 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCz2_aeo0w7T2VyC2pK45_6ytd2hiAY-zU',
-    appId: '1:404169488931:web:7140a90b282e5e2d9e8f96',
-    messagingSenderId: '404169488931',
-    projectId: 'voyake-42b11',
-    authDomain: 'voyake-42b11.firebaseapp.com',
-    storageBucket: 'voyake-42b11.appspot.com',
-    measurementId: 'G-RLVZ70BSD4',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAF53s4d6-cAfZZZI9_c_A3OYHs5DqIFZQ',
     appId: '1:404169488931:android:4304637fcde87b0a9e8f96',
@@ -68,14 +64,5 @@ class DefaultFirebaseOptions {
     projectId: 'voyake-42b11',
     storageBucket: 'voyake-42b11.appspot.com',
     iosBundleId: 'com.example.firebase',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAG9f-4GSDyR-BIHFZT-9TDXLFxYi7Z1Bg',
-    appId: '1:404169488931:ios:67e929c080c250289e8f96',
-    messagingSenderId: '404169488931',
-    projectId: 'voyake-42b11',
-    storageBucket: 'voyake-42b11.appspot.com',
-    iosBundleId: 'com.example.firebase.RunnerTests',
   );
 }
